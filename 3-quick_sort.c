@@ -43,9 +43,8 @@ int partition(int *array, int low, int high)
  * quick_sort - uses the lumoto partition scheme
  * @array: array to be sorted using the function
  * @size: size of array
- * Return: returns the redistributed list
  */
-size_t quick_sort(int *array, size_t size)
+void quick_sort(int *array, size_t size)
 {
 	int low = 0;
 	int high = size - 1;
