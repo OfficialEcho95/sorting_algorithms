@@ -21,10 +21,12 @@ void swap(int *a, int *b)
  */
 void selection_sort(int *array, size_t size) 
 {
-    for (size_t i = 0; i < size - 1; i++) 
+	size_t i, j, min_idx;
+
+    for (i = 0; i < size - 1; i++) 
     {
-        size_t min_idx = i;
-        for (size_t j = i + 1; j < size; j++) 
+        min_idx = i;
+        for (j = i + 1; j < size; j++) 
         {
             if (array[j] < array[min_idx]) 
             {
@@ -33,7 +35,7 @@ void selection_sort(int *array, size_t size)
         }
         if (min_idx != i)
         {
-            int temp = array[i];
+            size_t temp = array[i];
             array[i] = array[min_idx];
             array[min_idx] = temp;
             print_array(array, size);
